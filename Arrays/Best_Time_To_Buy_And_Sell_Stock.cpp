@@ -1,14 +1,13 @@
-/*
-Problem: Best Time to Buy and Sell Stock
-LeetCode: 121
+/* 
+Problem: Best Time to Buy and Sell Stock 
+LeetCode: 121 
+link: https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
 
-Approach:
-Track minimum price seen so far.
-At every step calculate current profit
-and update maximum profit.
+Approach: Track minimum price seen so far. 
+At every step calculate current profit and update maximum profit.
 
-Time Complexity: O(n)
-Space Complexity: O(1)
+Time Complexity: O(n) 
+Space Complexity: O(1) 
 */
 
 #include <vector>
