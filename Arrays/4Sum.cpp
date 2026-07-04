@@ -16,6 +16,7 @@ Space Complexity: O(1) (excluding the output array)
 */
 
 #include<vector>
+using namespace std;
 
 class Solution {
     public:
