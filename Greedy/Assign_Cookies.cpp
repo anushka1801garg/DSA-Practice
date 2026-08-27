@@ -1,19 +1,22 @@
 /*
-Problem: Count Primes
-LeetCode: 204
-Link: https://leetcode.com/problems/count-primes/
+Problem: Assign Cookies
+LeetCode: 455
+Link: https://leetcode.com/problems/assign-cookies/
 
 Approach:
-- Use a helper function `isprime()` to check whether a number is prime.
-- A number is considered prime if it is greater than 1 and has no divisor other than 1 and itself.
-- In `isprime()`, check all numbers from `2` to `n - 1`.
-- If any number divides `n`, then `n` is not prime.
-- In `countPrimes()`, iterate through all numbers from `2` to `n - 1`.
-- For every prime number, increment the count.
-- Return the total number of prime numbers less than `n`.
+- Sort both the greed factors `g` and cookie sizes `s` in ascending order.
+- Use two pointers:
+  - `i` points to the current child.
+  - `j` points to the current cookie.
+- If the current cookie is large enough to satisfy the current child, assign it:
+  - Increment the satisfied children count.
+  - Move both pointers forward.
+- If the cookie is too small, move `j` forward to try a larger cookie.
+- Continue until either all children or all cookies have been processed.
+- Return the total number of satisfied children.
 
-Time Complexity: O(n²)
-Space Complexity: O(1)
+Time Complexity: O(n log n + m log m)
+Space Complexity: O(1) excluding sorting space.
 */
 
 #include<vector>
